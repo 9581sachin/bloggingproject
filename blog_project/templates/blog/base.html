@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{%load blogs_tags%}
+{%load staticfiles%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+ <link rel="stylesheet" href="{%static 'css/demo.css'%}">
+    <title>{%block title_block%} {%endblock%}</title>
+</head>
+<body>
+<div class="content">
+    {%block content%}
+    {%endblock%}
+</div>
+<div class="sidebar">
+    <h2>Durga blog</h2>
+    <p>total no of updates are :{%my_tag%}</p>
+    <h2>Latest posts</h2>{%Latest_posts%}
+    <h2>Most commented posts</h2>
+    {%get_most_commented_posts as most_commented_posts%}
+    <ul>
+        {%for post in most_commented_posts%}
+        <li> <a href="{{post.get_absolute_url}}">{{post.title}}</a></li>
+        {%endfor%}
+    </ul>
+
+</div>
+</body>
+</html>

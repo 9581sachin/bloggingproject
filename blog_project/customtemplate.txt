@@ -1,0 +1,17 @@
+How to create our own template tags:
+{%sachin_tag%}
+custom template tags:
+----------------------
+3)utility functions;
+
+1)simple_tag:perform someprcessing and returns string
+2)inclusion_tag:perform some processing and returns in renderedtemplates
+3)assignment_tag:performsome processing and assign that result to variable in the context.
+
+first we need to create on templatetags in blogapplications in that add two python files named as __init__.py  and blog_tags.py
+
+Usage of simple_tag to return  number of posts published in blog:
+
+usage of inclusion_tag to display latestposts;
+
+

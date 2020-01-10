@@ -1,0 +1,20 @@
+.content{
+width:60%;
+float:left;
+padding:0 0 0 30px;
+background:green;
+color:red;
+}
+.sidebar{
+width:40%;
+float:right;
+padding:10px;
+background:orange;
+}
+#date{
+color:yellow;
+}
+input{
+background:green;
+color:red;
+}
